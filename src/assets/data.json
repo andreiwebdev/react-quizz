@@ -2,7 +2,7 @@
     "quizzes": [
         {
             "title": "HTML",
-            "icon": "./assets/images/icon-html.svg",
+            "icon": "/src/assets/images/img/icon-html.svg",
             "questions": [
                 {
                     "question": "What does HTML stand for?",
@@ -26,12 +26,7 @@
                 },
                 {
                     "question": "Which HTML element is used to define the title of a document?",
-                    "options": [
-                        "<head>",
-                        "<title>",
-                        "<header>",
-                        "<top>"
-                    ],
+                    "options": ["<head>", "<title>", "<header>", "<top>"],
                     "answer": "<title>"
                 },
                 {
@@ -46,42 +41,22 @@
                 },
                 {
                     "question": "Which HTML tag is used to create a hyperlink?",
-                    "options": [
-                        "<hyperlink>",
-                        "<link>",
-                        "<a>",
-                        "<href>"
-                    ],
+                    "options": ["<hyperlink>", "<link>", "<a>", "<href>"],
                     "answer": "<a>"
                 },
                 {
                     "question": "Which tag is used to display images in HTML?",
-                    "options": [
-                        "<img>",
-                        "<image>",
-                        "<src>",
-                        "<pic>"
-                    ],
+                    "options": ["<img>", "<image>", "<src>", "<pic>"],
                     "answer": "<img>"
                 },
                 {
                     "question": "What attribute is used to provide the path of an image in the <img> tag?",
-                    "options": [
-                        "link",
-                        "src",
-                        "href",
-                        "url"
-                    ],
+                    "options": ["link", "src", "href", "url"],
                     "answer": "src"
                 },
                 {
                     "question": "Which HTML tag is used to create an unordered list?",
-                    "options": [
-                        "<ul>",
-                        "<ol>",
-                        "<list>",
-                        "<li>"
-                    ],
+                    "options": ["<ul>", "<ol>", "<list>", "<li>"],
                     "answer": "<ul>"
                 },
                 {
@@ -108,7 +83,7 @@
         },
         {
             "title": "CSS",
-            "icon": "./assets/images/icon-css.svg",
+            "icon": "/src/assets/images/img/icon-css.svg",
             "questions": [
                 {
                     "question": "What does CSS stand for?",
@@ -122,12 +97,7 @@
                 },
                 {
                     "question": "Which HTML attribute is used to define inline styles?",
-                    "options": [
-                        "styles",
-                        "style",
-                        "class",
-                        "font-style"
-                    ],
+                    "options": ["styles", "style", "class", "font-style"],
                     "answer": "style"
                 },
                 {
@@ -152,12 +122,7 @@
                 },
                 {
                     "question": "How do you apply a style to all <p> elements?",
-                    "options": [
-                        "p { }",
-                        ".p { }",
-                        "#p { }",
-                        "all.p { }"
-                    ],
+                    "options": ["p { }", ".p { }", "#p { }", "all.p { }"],
                     "answer": "p { }"
                 },
                 {
@@ -182,22 +147,12 @@
                 },
                 {
                     "question": "How do you select an element with the class name 'header'?",
-                    "options": [
-                        ".header",
-                        "#header",
-                        "header",
-                        "*header"
-                    ],
+                    "options": [".header", "#header", "header", "*header"],
                     "answer": ".header"
                 },
                 {
                     "question": "What is the default value of the 'position' property?",
-                    "options": [
-                        "relative",
-                        "fixed",
-                        "absolute",
-                        "static"
-                    ],
+                    "options": ["relative", "fixed", "absolute", "static"],
                     "answer": "static"
                 },
                 {
@@ -214,7 +169,7 @@
         },
         {
             "title": "JavaScript",
-            "icon": "./assets/images/icon-js.svg",
+            "icon": "/src/assets/images/img/icon-js.svg",
             "questions": [
                 {
                     "question": "Which syntax is correct to output 'Hello World' in an alert box?",
@@ -256,7 +211,7 @@
                     ],
                     "answer": "if (i != 5)"
                 },
-                  {
+                {
                     "question": "How does a FOR loop start?",
                     "options": [
                         "for (i = 0; i <= 5)",
@@ -269,10 +224,10 @@
                 {
                     "question": "How can you add a single-line comment in JavaScript?",
                     "options": [
-                      "'This is a single-line comment",
-                      "//This is a single-line comment",
-                      "<!--This is a single-line comment-->",
-                      "/* This is a single-line comment */"
+                        "'This is a single-line comment",
+                        "//This is a single-line comment",
+                        "<!--This is a single-line comment-->",
+                        "/* This is a single-line comment */"
                     ],
                     "answer": "//This is a single-line comment"
                 },
@@ -298,12 +253,7 @@
                 },
                 {
                     "question": "Which operator is used to assign a value to a variable?",
-                    "options": [
-                        "-",
-                        "*",
-                        "=",
-                        "x"
-                    ],
+                    "options": ["-", "*", "=", "x"],
                     "answer": "="
                 },
                 {
@@ -320,7 +270,7 @@
         },
         {
             "title": "Accessibility",
-            "icon": "./assets/images/icon-accessibility.svg",
+            "icon": "/src/assets/images/img/icon-accessibility.svg",
             "questions": [
                 {
                     "question": "What does 'WCAG' stand for?",
@@ -364,22 +314,12 @@
                 },
                 {
                     "question": "Which of these color contrast ratios defines the minimum WCAG 2.1 Level AA requirement for normal text?",
-                    "options": [
-                        "3:1",
-                        "4.5:1",
-                        "7:1",
-                        "2:1"
-                    ],
+                    "options": ["3:1", "4.5:1", "7:1", "2:1"],
                     "answer": "4.5:1"
                 },
                 {
                     "question": "Which of the following elements is inherently focusable, meaning it can receive focus without a 'tabindex' attribute?",
-                    "options": [
-                        "<div>",
-                        "<span>",
-                        "<a href='...'>",
-                        "<p>"
-                    ],
+                    "options": ["<div>", "<span>", "<a href='...'>", "<p>"],
                     "answer": "<a href='...'>"
                 },
                 {
