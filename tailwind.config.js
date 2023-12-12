@@ -7,6 +7,7 @@ module.exports = {
                 rubik: ["Rubik", "sans-serif"],
             },
             colors: {
+                purple: "#A729F5",
                 error: "#EE5454",
                 white: "#FFFFFF",
                 lightBlue: "#ABC1E1",
