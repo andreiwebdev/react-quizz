@@ -24,22 +24,16 @@ const GameOver = () => {
         <div className="xl:grid xl:grid-cols-2 gap-28">
             <InfoSection screen="game-over" />
             <div>
-                <div
-                    className="bg-white p-[32px] mb-3 rounded-xl text-center md:p-[48px] md:rounded-3xl md:mb-[32px]"
-                    style={{
-                        boxShadow:
-                            "0px 16px 40px 0px rgba(143, 160, 193, 0.14)",
-                    }}
-                >
+                <div className="bg-white p-[32px] mb-3 rounded-xl text-center md:p-[48px] md:rounded-3xl md:mb-[32px] shadow-card-light dark:bg-navy dark:shadow-card-dark">
                     <SubjectLabel
                         title={quizzSubject.title}
                         icon={quizzSubject.icon}
                         extraClasses="p-0 !static flex justify-center items-center"
                     />
-                    <div className="text-darkNavy font-bold text-[88px] mb-4 md:text-[144px]">
+                    <div className="text-darkNavy font-bold text-[88px] mb-4 md:text-[144px] dark:text-white">
                         {score}
                     </div>
-                    <div className="text-greyNavy text-[18px] md:text-[24px]">
+                    <div className="text-greyNavy text-[18px] md:text-[24px] dark:text-lightBluish">
                         out of {quizzSubject.questions.length}
                     </div>
                 </div>

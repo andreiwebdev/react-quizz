@@ -19,6 +19,7 @@ const initialState: QuizzStoreTypes = {
     },
     isCorrectAnswer: null,
     score: 0,
+    darkMode: false,
 };
 
 const quizzSlice = createSlice({
@@ -71,6 +72,9 @@ const quizzSlice = createSlice({
                 correctAnswerIndex: null,
             };
             state.isCorrectAnswer = null;
+        },
+        toggleDarkMode(state) {
+            state.darkMode = !state.darkMode;
         },
     },
 });

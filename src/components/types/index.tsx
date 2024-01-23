@@ -64,6 +64,7 @@ type QuizzStoreTypes = {
     };
     isCorrectAnswer: boolean | null;
     score: number;
+    darkMode: boolean;
 };
 
 export type {

@@ -7,10 +7,7 @@ const Subject = (props: SubjectProps) => {
             onClick={() =>
                 props.onClickHandle && props.onClickHandle(props.title)
             }
-            style={{
-                boxShadow: "0px 16px 40px 0px rgba(143, 160, 193, 0.14)",
-            }}
-            className="group flex items-center p-3 gap-8 rounded-xl bg-white mb-3 md:mb-6 cursor-pointer border-4 border-white"
+            className="group flex items-center shadow-card-light p-3 gap-8 rounded-xl bg-white mb-3 md:mb-6 cursor-pointer border-4 border-white dark:bg-navy dark:border-navy dark:shadow-card-dark"
         >
             <div
                 className={
@@ -25,7 +22,7 @@ const Subject = (props: SubjectProps) => {
                     className="w-[28px] md:w-[40px]"
                 />
             </div>
-            <h4 className="text-[18px] md:text-[28px] font-medium text-darkNavy">
+            <h4 className="text-[18px] md:text-[28px] font-medium text-darkNavy dark:text-white">
                 {props.title}
             </h4>
         </div>

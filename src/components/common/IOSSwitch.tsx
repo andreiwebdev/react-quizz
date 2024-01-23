@@ -1,13 +1,24 @@
 import { styled } from "@mui/material/styles";
 import Switch, { SwitchProps } from "@mui/material/Switch";
+import { useDispatch } from "react-redux";
+import { quizzActions } from "../../store/store";
 
-const IOSSwitch = styled((props: SwitchProps) => (
-    <Switch
-        focusVisibleClassName=".Mui-focusVisible"
-        disableRipple
-        {...props}
-    />
-))(({ theme }) => ({
+const IOSSwitch = styled((props: SwitchProps) => {
+    const dispatch = useDispatch();
+
+    const toggleDarkMode = () => {
+        dispatch(quizzActions.toggleDarkMode());
+    };
+
+    return (
+        <Switch
+            focusVisibleClassName=".Mui-focusVisible"
+            onClick={toggleDarkMode}
+            disableRipple
+            {...props}
+        />
+    );
+})(({ theme }) => ({
     width: 42,
     height: 26,
     padding: 0,

@@ -21,7 +21,7 @@ const SubjectLabel = (props: SubjectLabelProps) => {
                     className="w-[28px] md:w-[40px]"
                 />
             </div>
-            <h4 className="text-[18px] md:text-[28px] font-medium text-darkNavy">
+            <h4 className="text-[18px] md:text-[28px] font-medium text-darkNavy dark:text-white">
                 {props.title}
             </h4>
         </div>

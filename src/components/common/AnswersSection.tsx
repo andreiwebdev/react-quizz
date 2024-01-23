@@ -46,7 +46,7 @@ const AnswersSection = () => {
                 className={`w-full bg-purple text-white p-[12px] md:p-[18px] rounded-xl md:rounded-3xl text-[18px] md:text-[28px] font-medium ${
                     selectedAnswer.length > 1
                         ? ""
-                        : "disabled:opacity-50 disabled:cursor-not-allowed"
+                        : "disabled:opacity-50 disabled:cursor-not-allowed dark:disabled:opacity-50 dark:disabled:cursor-not-allowed"
                 }`}
                 disabled={selectedAnswer.length > 1 ? false : true}
             >

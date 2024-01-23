@@ -1,5 +1,4 @@
 import IOSSwitch from "./IOSSwitch";
-import { iconMoonDark, iconSunDark } from "../../assets/images/index";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import SubjectLabel from "./SubjectLabel";
@@ -26,9 +25,9 @@ const Topbar = () => {
                     />
                 ))}
             <div className="flex items-center gap-4 absolute right-0 top-[19px] md:top-[28px]">
-                <img src={iconSunDark} alt="icon-sun-light" />
+                <div className="dark:bg-icon-sun-light bg-icon-sun-dark w-[30px] h-[30px] bg-contain bg-no-repeat"></div>
                 <IOSSwitch />
-                <img src={iconMoonDark} alt="icon-moon-light" />
+                <div className="dark:bg-icon-moon-light bg-icon-moon-dark w-[30px] h-[30px] bg-contain bg-no-repeat"></div>
             </div>
         </div>
     );
