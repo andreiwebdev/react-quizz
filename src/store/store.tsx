@@ -48,8 +48,7 @@ const quizzSlice = createSlice({
             }
         },
         nextQuestion(state) {
-            if (state.questionIndex === 9) {
-            } else {
+            if (state.questionIndex !== 9) {
                 state.questionIndex++;
                 state.activeQuestion =
                     state.questionsData[0].questions[state.questionIndex];
@@ -64,14 +63,19 @@ const quizzSlice = createSlice({
         playAgain(state) {
             state.questionIndex = 0;
             state.isGameStarted = false;
-            state.activeQuestion =
-                state.questionsData[0].questions[state.questionIndex];
+            state.questionsData = [];
+            state.activeQuestion = {
+                question: "",
+                options: [],
+                answer: "",
+            };
             state.selectedAnswer = {
                 id: null,
                 answer: "",
                 correctAnswerIndex: null,
             };
             state.isCorrectAnswer = null;
+            state.score = 0;
         },
         toggleDarkMode(state) {
             state.darkMode = !state.darkMode;
@@ -84,4 +88,5 @@ const store = configureStore({
 });
 
 export const quizzActions = quizzSlice.actions;
+export const quizzReducer = quizzSlice.reducer;
 export default store;
