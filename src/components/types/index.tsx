@@ -3,7 +3,12 @@ type WrapperProps = {
 };
 
 type SubjectsContainerProps = {
-    data?: SubjectProps[];
+    data?: {
+        id?: number;
+        title: string;
+        icon?: string;
+        selectedAnswer?: boolean;
+    }[];
     options?: string[];
     handleStartQuizz: (subject: string) => void;
 };
@@ -50,7 +55,7 @@ type QuizzStoreTypes = {
     questionsData: QuizzTypes[];
     isGameStarted: boolean;
     questionIndex: number;
-    activeQuestion: ActiveQuestionProps | [];
+    activeQuestion: ActiveQuestionProps;
     selectedAnswer: {
         length?: number;
         id: number | null;

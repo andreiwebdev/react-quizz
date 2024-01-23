@@ -1,28 +1,21 @@
 import { createSlice, configureStore } from "@reduxjs/toolkit";
 import jsonData from "../assets/data.json";
-import { QuizzTypes } from "../components/types";
+import { QuizzStoreTypes, QuizzTypes } from "../components/types";
 
-const initialState: {
-    data: QuizzTypes[];
-    questionsData: QuizzTypes[];
-    activeQuestion: any;
-    isGameStarted: boolean;
-    questionIndex: number;
-    selectedAnswer: {
-        id: number | null;
-        answer: string;
-    };
-    isCorrectAnswer: boolean | null;
-    score: number;
-} = {
+const initialState: QuizzStoreTypes = {
     data: jsonData.quizzes,
     questionsData: [],
-    activeQuestion: [],
+    activeQuestion: {
+        question: "",
+        options: [],
+        answer: "",
+    },
     isGameStarted: false,
     questionIndex: 0,
     selectedAnswer: {
         id: null,
         answer: "",
+        correctAnswerIndex: null,
     },
     isCorrectAnswer: null,
     score: 0,
@@ -62,6 +55,7 @@ const quizzSlice = createSlice({
                 state.selectedAnswer = {
                     id: null,
                     answer: "",
+                    correctAnswerIndex: null,
                 };
                 state.isCorrectAnswer = null;
             }
@@ -74,6 +68,7 @@ const quizzSlice = createSlice({
             state.selectedAnswer = {
                 id: null,
                 answer: "",
+                correctAnswerIndex: null,
             };
             state.isCorrectAnswer = null;
         },

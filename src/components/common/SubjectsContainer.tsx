@@ -1,10 +1,10 @@
-import { SubjectsContainerProps, SubjectProps } from "../types/index";
+import { SubjectsContainerProps } from "../types/index";
 import Subject from "./Subject";
 
 const SubjectsContainer = (props: SubjectsContainerProps) => {
     return (
         <div>
-            {props.data?.map((subject: SubjectProps, key) => (
+            {props.data?.map((subject, key: number) => (
                 <Subject
                     key={key}
                     title={subject.title}
