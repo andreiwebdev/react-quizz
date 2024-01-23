@@ -16,14 +16,20 @@ const Topbar = () => {
 
     return (
         <div className="flex items-center justify-between w-full h-10 mb-6 md:mb-32 relative">
-            {(currentUrl === "/quizz" && isGameStarted) ||
-                (currentUrl === "/game-over" && (
-                    <SubjectLabel
-                        title={quizzSubject.title}
-                        icon={quizzSubject.icon}
-                        extraClasses="p-0"
-                    />
-                ))}
+            {currentUrl === "/quizz" && isGameStarted && (
+                <SubjectLabel
+                    title={quizzSubject.title}
+                    icon={quizzSubject.icon}
+                    extraClasses="p-0"
+                />
+            )}
+            {currentUrl === "/game-over" && isGameStarted && (
+                <SubjectLabel
+                    title={quizzSubject.title}
+                    icon={quizzSubject.icon}
+                    extraClasses="p-0"
+                />
+            )}
             <div className="flex items-center gap-4 absolute right-0 top-[19px] md:top-[28px]">
                 <div className="dark:bg-icon-sun-light bg-icon-sun-dark w-[30px] h-[30px] bg-contain bg-no-repeat"></div>
                 <IOSSwitch />
