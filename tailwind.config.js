@@ -21,25 +21,19 @@ module.exports = {
             },
             backgroundImage: {
                 "mobile-light":
-                    "url('src/assets/images/img/pattern-background-mobile-light.svg')",
+                    "url('img/pattern-background-mobile-light.svg')",
                 "tablet-light":
-                    "url('/src/assets/images/img/pattern-background-tablet-light.svg')",
+                    "url('/img/pattern-background-tablet-light.svg')",
                 "desktop-light":
-                    "url('/src/assets/images/img/pattern-background-desktop-light.svg')",
-                "mobile-dark":
-                    "url('src/assets/images/img/pattern-background-mobile-dark.svg')",
-                "tablet-dark":
-                    "url('/src/assets/images/img/pattern-background-tablet-dark.svg')",
+                    "url('/img/pattern-background-desktop-light.svg')",
+                "mobile-dark": "url('img/pattern-background-mobile-dark.svg')",
+                "tablet-dark": "url('/img/pattern-background-tablet-dark.svg')",
                 "desktop-dark":
-                    "url('/src/assets/images/img/pattern-background-desktop-dark.svg')",
-                "icon-sun-light":
-                    "url('/src/assets/images/img/icon-sun-light.svg')",
-                "icon-sun-dark":
-                    "url('/src/assets/images/img/icon-sun-dark.svg')",
-                "icon-moon-light":
-                    "url('/src/assets/images/img/icon-moon-light.svg')",
-                "icon-moon-dark":
-                    "url('/src/assets/images/img/icon-moon-dark.svg')",
+                    "url('/img/pattern-background-desktop-dark.svg')",
+                "icon-sun-light": "url('/img/icon-sun-light.svg')",
+                "icon-sun-dark": "url('/img/icon-sun-dark.svg')",
+                "icon-moon-light": "url('/img/icon-moon-light.svg')",
+                "icon-moon-dark": "url('/img/icon-moon-dark.svg')",
             },
             boxShadow: {
                 "card-light": "0px 16px 40px 0px rgba(143, 160, 193, 0.14)",
