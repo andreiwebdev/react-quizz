@@ -1,6 +1,10 @@
 import { createSlice, configureStore } from "@reduxjs/toolkit";
 import jsonData from "../assets/data.json";
 import { QuizzStoreTypes, QuizzTypes } from "../components/types";
+import {
+    loadFromLocalStorage,
+    saveToLocalStorage,
+} from "../utils/localStorage";
 
 const initialState: QuizzStoreTypes = {
     data: jsonData.quizzes,
@@ -19,7 +23,7 @@ const initialState: QuizzStoreTypes = {
     },
     isCorrectAnswer: null,
     score: 0,
-    darkMode: false,
+    darkMode: loadFromLocalStorage("darkMode") ?? false,
 };
 
 const quizzSlice = createSlice({
@@ -85,6 +89,10 @@ const quizzSlice = createSlice({
 
 const store = configureStore({
     reducer: quizzSlice.reducer,
+});
+
+store.subscribe(() => {
+    saveToLocalStorage("darkMode", store.getState().darkMode);
 });
 
 export const quizzActions = quizzSlice.actions;
