@@ -13,16 +13,12 @@ const answerVariants = {
 const Answer = (props: AnswerProps) => {
     const dispatch = useDispatch();
 
-    const answerData = useSelector(
-        (state: QuizzStoreTypes) => state.selectedAnswer
-    );
-
-    const isCorrectAnswer = useSelector(
-        (state: QuizzStoreTypes) => state.isCorrectAnswer
-    );
-
-    const activeQuestion = useSelector(
-        (state: QuizzStoreTypes) => state.activeQuestion
+    const { answerData, isCorrectAnswer, activeQuestion } = useSelector(
+        (state: QuizzStoreTypes) => ({
+            answerData: state.selectedAnswer,
+            isCorrectAnswer: state.isCorrectAnswer,
+            activeQuestion: state.activeQuestion,
+        })
     );
 
     const onClickHandle = (answer: string) => {

@@ -19,11 +19,10 @@ const GameOver = () => {
     const navigate = useNavigate();
     const [showConfetti, setShowConfetti] = useState(true);
 
-    const quizzSubject = useSelector(
-        (state: QuizzStoreTypes) => state.questionsData[0]
-    );
-
-    const score = useSelector((state: QuizzStoreTypes) => state.score);
+    const { questionsData, score } = useSelector((state: QuizzStoreTypes) => ({
+        questionsData: state.questionsData[0],
+        score: state.score,
+    }));
 
     const playAgain = () => {
         navigate("/");
@@ -40,15 +39,15 @@ const GameOver = () => {
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                 >
                     <SubjectLabel
-                        title={quizzSubject.title}
-                        icon={quizzSubject.icon}
+                        title={questionsData.title}
+                        icon={questionsData.icon}
                         extraClasses="p-0 !static flex justify-center items-center"
                     />
                     <div className="text-darkNavy font-bold text-[88px] mb-4 md:text-[144px] dark:text-white">
                         {score}
                     </div>
                     <div className="text-greyNavy text-[18px] md:text-[24px] dark:text-lightBluish">
-                        out of {quizzSubject.questions.length}
+                        out of {questionsData.questions.length}
                     </div>
                 </motion.div>
                 <motion.button
