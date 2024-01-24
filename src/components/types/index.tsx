@@ -18,6 +18,7 @@ type AnswerProps = {
     answer: string;
     icon?: string;
     selectedAnswer?: boolean;
+    delay: number;
 };
 
 type SubjectProps = {
@@ -26,6 +27,7 @@ type SubjectProps = {
     icon?: string;
     selectedAnswer?: boolean;
     onClickHandle: (subject: string) => void;
+    delay: number;
 };
 
 type QuizzTypes = {

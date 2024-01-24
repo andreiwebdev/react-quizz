@@ -1,12 +1,16 @@
+import { motion } from "framer-motion";
 import { SubjectLabelProps } from "../types";
 
 const SubjectLabel = (props: SubjectLabelProps) => {
     return (
-        <div
+        <motion.div
             className={
                 "flex items-center p-3 gap-8 rounded-xl absolute top-0 left-0 " +
                 props.extraClasses
             }
+            initial={{ opacity: 0, scale: 0.5, y: 200 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
         >
             <div
                 className={
@@ -24,7 +28,7 @@ const SubjectLabel = (props: SubjectLabelProps) => {
             <h4 className="text-[18px] md:text-[28px] font-medium text-darkNavy dark:text-white">
                 {props.title}
             </h4>
-        </div>
+        </motion.div>
     );
 };
 

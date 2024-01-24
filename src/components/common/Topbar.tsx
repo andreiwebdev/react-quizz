@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 import SubjectLabel from "./SubjectLabel";
 import { QuizzStoreTypes } from "../types";
+import { motion } from "framer-motion";
 
 const Topbar = () => {
     const quizzSubject = useSelector(
@@ -23,18 +24,16 @@ const Topbar = () => {
                     extraClasses="p-0"
                 />
             )}
-            {currentUrl === "/game-over" && isGameStarted && (
-                <SubjectLabel
-                    title={quizzSubject.title}
-                    icon={quizzSubject.icon}
-                    extraClasses="p-0"
-                />
-            )}
-            <div className="flex items-center gap-4 absolute right-0 top-[19px] md:top-[28px]">
+            <motion.div
+                className="flex items-center gap-4 absolute right-0 top-[19px] md:top-[28px]"
+                initial={{ opacity: 0, scale: 0.5, y: 200 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+            >
                 <div className="dark:bg-icon-sun-light bg-icon-sun-dark w-[30px] h-[30px] bg-contain bg-no-repeat"></div>
                 <IOSSwitch />
                 <div className="dark:bg-icon-moon-light bg-icon-moon-dark w-[30px] h-[30px] bg-contain bg-no-repeat"></div>
-            </div>
+            </motion.div>
         </div>
     );
 };

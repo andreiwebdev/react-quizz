@@ -3,6 +3,12 @@ import { AnswerProps, QuizzStoreTypes } from "../types";
 import { quizzActions } from "../../store/store";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { FaRegCircleXmark } from "react-icons/fa6";
+import { motion } from "framer-motion";
+
+const answerVariants = {
+    hidden: { y: 50, opacity: 0 },
+    show: { y: 0, opacity: 1 },
+};
 
 const Answer = (props: AnswerProps) => {
     const dispatch = useDispatch();
@@ -55,13 +61,19 @@ const Answer = (props: AnswerProps) => {
     }
 
     return (
-        <div
+        <motion.div
             key={props.id}
             onClick={() => onClickHandle && onClickHandle(props.answer)}
             className={
                 "group flex items-center p-3 gap-8 rounded-xl bg-white mb-3 md:mb-6 cursor-pointer border-2 border-white shadow-card-light dark:bg-navy dark:border-navy dark:shadow-card-dark relative pr-6 " +
                 containerExtraClasses
             }
+            variants={answerVariants}
+            transition={{ delay: props.delay }}
+            whileHover={{
+                scale: 1.03,
+                transition: { duration: 0.1, delay: 0 },
+            }}
         >
             <div
                 className={
@@ -88,7 +100,7 @@ const Answer = (props: AnswerProps) => {
                         <FaRegCheckCircle className="text-green-400 text-2xl absolute right-2" />
                     )}
             </div>
-        </div>
+        </motion.div>
     );
 };
 

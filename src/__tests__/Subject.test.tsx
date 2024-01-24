@@ -10,6 +10,7 @@ describe("Subject component", () => {
         title: "HTML",
         icon: "/img/icon-html.svg",
         onClickHandle: mockOnClick,
+        delay: 0.4,
     };
 
     it("renders without crashing", () => {
