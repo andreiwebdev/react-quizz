@@ -21,12 +21,12 @@ module.exports = {
             },
             backgroundImage: {
                 "mobile-light":
-                    "url('img/pattern-background-mobile-light.svg')",
+                    "url('/img/pattern-background-mobile-light.svg')",
                 "tablet-light":
                     "url('/img/pattern-background-tablet-light.svg')",
                 "desktop-light":
                     "url('/img/pattern-background-desktop-light.svg')",
-                "mobile-dark": "url('img/pattern-background-mobile-dark.svg')",
+                "mobile-dark": "url('/img/pattern-background-mobile-dark.svg')",
                 "tablet-dark": "url('/img/pattern-background-tablet-dark.svg')",
                 "desktop-dark":
                     "url('/img/pattern-background-desktop-dark.svg')",
