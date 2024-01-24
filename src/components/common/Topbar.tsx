@@ -6,22 +6,21 @@ import { QuizzStoreTypes } from "../types";
 import { motion } from "framer-motion";
 
 const Topbar = () => {
+    const quizzSubject = useSelector(
+        (state: QuizzStoreTypes) => state.questionsData[0]
+    );
+    const isGameStarted = useSelector(
+        (state: QuizzStoreTypes) => state.isGameStarted
+    );
     const location = useLocation();
     const currentUrl = location.pathname;
-
-    const { questionsData, isGameStarted } = useSelector(
-        (state: QuizzStoreTypes) => ({
-            questionsData: state.questionsData[0],
-            isGameStarted: state.isGameStarted,
-        })
-    );
 
     return (
         <div className="flex items-center justify-between w-full h-10 mb-6 md:mb-32 relative">
             {currentUrl === "/quizz" && isGameStarted && (
                 <SubjectLabel
-                    title={questionsData.title}
-                    icon={questionsData.icon}
+                    title={quizzSubject.title}
+                    icon={quizzSubject.icon}
                     extraClasses="p-0"
                 />
             )}

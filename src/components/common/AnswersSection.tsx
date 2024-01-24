@@ -19,13 +19,21 @@ const AnswersSection = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const { activeQuestion, selectedAnswer, isCorrectAnswer, questionIndex } =
-        useSelector((state: QuizzStoreTypes) => ({
-            activeQuestion: state.activeQuestion,
-            selectedAnswer: state.selectedAnswer.answer,
-            isCorrectAnswer: state.isCorrectAnswer,
-            questionIndex: state.questionIndex,
-        }));
+    const question = useSelector(
+        (state: QuizzStoreTypes) => state.activeQuestion
+    );
+
+    const selectedAnswer = useSelector(
+        (state: QuizzStoreTypes) => state.selectedAnswer.answer
+    );
+
+    const isCorrectAnswer = useSelector(
+        (state: QuizzStoreTypes) => state.isCorrectAnswer
+    );
+
+    const questionIndex = useSelector(
+        (state: QuizzStoreTypes) => state.questionIndex
+    );
 
     const handleAnswer = () => {
         if (isCorrectAnswer === null) {
@@ -41,7 +49,7 @@ const AnswersSection = () => {
 
     return (
         <motion.div variants={container} initial="hidden" animate="show">
-            {activeQuestion.options.map((option, key) => (
+            {question.options.map((option, key) => (
                 <Answer key={key} id={key} answer={option} delay={key / 10} />
             ))}
             <motion.button
@@ -52,7 +60,7 @@ const AnswersSection = () => {
                         : "disabled:opacity-50 disabled:cursor-not-allowed dark:disabled:opacity-50 dark:disabled:cursor-not-allowed"
                 }`}
                 disabled={selectedAnswer.length > 1 ? false : true}
-                transition={{ delay: activeQuestion.options.length / 10 }}
+                transition={{ delay: question.options.length / 10 }}
                 variants={{
                     hidden: { y: 50, opacity: 0 },
                     show: { y: 0, opacity: 1 },
