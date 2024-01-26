@@ -55,11 +55,11 @@ const AnswersSection = () => {
             <motion.button
                 onClick={handleAnswer}
                 className={`w-full bg-purple text-white p-[12px] md:p-[18px] rounded-xl md:rounded-3xl text-[18px] md:text-[28px] font-medium ${
-                    selectedAnswer.length > 1
+                    selectedAnswer.length >= 1
                         ? ""
                         : "disabled:opacity-50 disabled:cursor-not-allowed dark:disabled:opacity-50 dark:disabled:cursor-not-allowed"
                 }`}
-                disabled={selectedAnswer.length > 1 ? false : true}
+                disabled={selectedAnswer.length >= 1 ? false : true}
                 transition={{ delay: question.options.length / 10 }}
                 variants={{
                     hidden: { y: 50, opacity: 0 },
